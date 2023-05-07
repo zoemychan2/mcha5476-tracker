@@ -1,0 +1,27 @@
+{
+  "name": "mcha5476-tracker",
+  "version": "1.0.0",
+  "description": "Boba tracker to track boba tea orders.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zoemychan2/mcha5476-tracker.git"
+  },
+  "keywords": [
+    "Boba",
+    "tracker",
+    "bobatea",
+    "tea",
+    "milktea"
+  ],
+  "author": "Zoe Chan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zoemychan2/mcha5476-tracker/issues"
+  },
+  "homepage": "https://github.com/zoemychan2/mcha5476-tracker#readme"
+}

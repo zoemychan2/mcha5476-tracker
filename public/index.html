@@ -4,10 +4,65 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BobaTracker</title>
+    <title>Bobatracker</title>
+    <link href="style.css" rel="stylesheet"/>
 </head>
 <body>
-    <h1>BobaTrack</h1>
-    
+    <h1>BOBATRACK🧋</h1>
+
+    <div class ="float-container">
+            <div class="bobatrack-form">
+    <h2>BobaTrack Form</h2>
+    <form>
+        <div class="form-row">
+            <label for="bobaOrder">Boba Order</label> <br>
+            <input type="text" name="bobaOrder" id="bobaOrder" required="true" placeholder="Enter Your Boba Order" />
+          </div>
+
+        <div class="form-row">
+            <label for="bobaShop">Boba Shop</label><br>
+            <input type="text" name="bobaShop" id="bobaShop" required="true" placeholder="Enter Boba Shop Name"/>
+          </div>
+
+        <div class="form-row">
+            <label for="bobaSize">Size</label><br>
+            <input type="number" name="bobaSize" id="bobaSize" required="true" />
+          </div>
+
+        <div class="form-row">
+            <label for="bobaPrice">Price</label><br>
+            <input type="number" name="bobaPrice" id="bobaPrice" required="true" placeholder="Eg. $6.8"/>
+          </div>
+
+        <div class="form-row">
+            <label for="bobaRating">Rating</label><br>
+            <select name="boba-rating" id="boba-rating" required="true">
+                <option value="select-star">Select... </option>
+                <option value="one-star">1 Star ⭐️ </option>
+                <option value="two-star">2 Star ⭐️⭐️ </option>
+                <option value="three-star">3 Star ⭐️⭐️⭐️ </option>
+                <option value="four-star">4 Star ⭐️⭐️⭐️⭐️ </option>
+                <option value="five-star">5 Star ⭐️⭐️⭐️⭐️⭐️ </option>
+            </select>
+          </div>
+
+        <div class="form-row">
+            <label for="bobaComments">Comments</label><br>
+            <textarea name="bobaComments" id="bobaComments" required="true" placeholder="Type your comments here..."></textarea>
+          </div>
+
+        <div class="submit-reset">
+            <input type="submit" value="Add to Tracked Boba Orders" />
+            <input type="reset" value="Reset" />
+          </div>
+    </form>
+    </div>
+
+        <div class="trackedboba-orders">
+        <h2>Tracked Boba Orders</h2>
+    </div>
+</div>
+
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,85 +1,208 @@
+/* Setting the background colour, how much of the page the content should fill, and fonts that are used in this html web application*/
 html {
-    background-color: #e4ddd5;
+    background-color: #f4f3ed;
     height: 100%;
     width: 100%;
     font-family: Arial, Helvetica, sans-serif;
   }
 
+/* Leave 1% padding all around the body content, preventing the content from touching the edges of the page*/
 body {
     padding: 1%;
   } 
 
+/* BobaTrack title */
 h1 {
-  background-color: #dec0af;
-  text-align: left;
-  padding: 20px;
-  margin-top: 0;
-  border-radius: 10px;
+  background-color: #dec0af; /* Colour of the rounded background shape */
+  text-align: left; /* BOBATRACK will be placed on the left */
+  padding: 20px; /* 20px spacing between the BobaTrack title and the background shape */
+  margin-top: 0; /* No  top margin above BobaTrack title*/
+  border-radius: 10px; /* Rounded rectangle shape */
 }
 
+/* Subheadings for the 2 main sections of the web application - BobaTrack Form & Tracked Boba Orders */
 h2 {
-    color: white;
-    background-color: #443d43;  
-    padding: 20px;
-    margin-top: 0;
-    border-radius: 10px;
+    color: white; /* Text colour is white */
+    background-color: #443d43;  /* Background colour is brown */
+    padding: 20px; /* 20px spacing between each subheading and their background shape */
+    margin-top: 0; /* No top margin above the subheadings, reduces the gap*/
+    border-radius: 10px; /* Rounded rectangle shape */
 }
 
+/* Styles added to the float container  - container consists of both bobatrack form and tracked boba orders */
 .float-container{
+    /* To create the 2 equal sections, with a gap in the middle, I created the layout on the website, which generated the grid CSS through https://grid.layoutit.com/ */
     display: grid; 
     grid-template-columns: 1fr 1fr; 
     gap: 20px;
     grid-template-areas: 
         "bobatrack-form trackedboba-orders"; 
 }
-
+/* Assigning name to a grid items, which is referenced by grid-template-areas in the float-container */
 .bobatrack-form { 
     grid-area: bobatrack-form; 
 }
+.trackedboba-orders { 
+    grid-area: trackedboba-orders; 
+}
 
-.trackedboba-orders { grid-area: trackedboba-orders; }
 
-.form-row, .submit-reset{
+
+/* BOBATRACK FORM CSS */
+
+/* Within BobaTrack Form, each section has 20px padding on all sides. This includes all the input sections, and submit/reset button */
+.form-row, .form-rowsize, .submit-reset{
     padding: 20px;
 }
 
+/* Each of the subheadings under BobaTrack Form have font size 18px (Boba Order, Boba Shop, Size, Price, Ratings, Comments */
 .bobatrack-form label{
     font-size: 18px;
 }
 
+/* Styling of the text and number input boxes (Boba Order, Boba Shop, Price) */
 .form-row input{
     font-size: 16px;
-    padding: 10px 10px;
-    width: 95%;
-    border-radius: 10px;
-    border-color: #443d43;
-    border-width: 0.1rem;
+    padding: 10px ; /* The input boxes have padding of 10px all around  */
+    width: 95%; /* Input boxes fill up 95% of the BobaTrack section, as it would look too cramped filling it up all the way to the edge */
+    border-radius: 10px; /* Making rounded edges on the input boxes */
+    border-color: #443d43; /* Border colour of the inbox box */
+    border-width: 0.1rem; /* Standardising the border width to 0.1rem */
+    margin-top: 0.5rem; /* Create 0.5rem distance between input labels and input boxes */
 }
 
+/* Create 0.5rem distance between Rating label and dropdown box (Rating section) */
 .form-row select{
-    font-size: 16px;
-    padding: 10px 10px;
-    width: 98%;
-    border-radius: 10px;
-    border-color: #443d43;
-    border-width: 0.1rem;
+    margin-top: 0.5rem;
 }
 
+/* Create 0.5rem distance between Comment label and comment box (Comment section) */
 .form-row textarea{
-    font-size: 16px;
-    padding: 10px 10px;
-    width: 95%;
-    height: 100px;
-    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 0.5rem;
+}
+
+
+/* Styling the radio buttons in Size section */
+
+/* radio-buttons consist of all 3 radio selectors*/
+.radio-buttons{
+    margin: 0 auto; /* Radio selectors placed horizontally across screen, within in the BobaTrack section */
+}
+
+/* Hides the original default radio selectors, since I created my own version*/
+.custom-radio input{
+    display: none;
+}
+
+/* Styling of my custom radio buttons */
+.radio-btn{
+    /* Each radio button has width and height of 140px */
+    width: 140px; 
+    height: 140px;
+    display: inline-block; /* Makes sure to display the radio buttons horizontally */
+    border-radius: 10px; /* Making the radio button to have rounded edges */
+    position: relative; /* Position of the radio buttons are relative to the parent element  */
+    text-align: center; /* Text is centered within the button */
+    background-color: #ded7d4; /* Colour of the radio buttons before being pressed */
+    cursor: pointer; /* Makes sure the pointer appears when hovering over the radio buttons*/
+    border: 0.1rem solid #443d43; /* Styling the border of the radio buttons */
+    margin-top: 0.5rem; /* Adding margin between the radio buttons and the Size label */
+}
+
+/* Changing colour of radio button whenever it is checked/cliked on */
+.custom-radio input:checked + .radio-btn{
+    background-color: #b9b4b2;
+}
+
+/* Styling the text & icon section in 'Small' radio button*/
+.radio-btn .small-section {
+    width: 80px; 
+    height: 80px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+/* Styling the boba tea icon in the 'Small' radio button*/
+.radio-btn .small-section p{
+    font-size: 25px;
+    padding-top: 30%; /* Distance between boba tea icon and the top of the radio button */
+    padding-bottom: 20%; /* Distance between boba tea icon and the text */
+    margin: auto; /* Makes sure the boba tea icons are within the radio button */
+}
+
+/* Styling the text & icon section in 'Medium' radio button - the same as 'Small' radio button for consistency */
+.radio-btn .medium-section{
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+/* Styling the boba tea icon in the 'Medium' radio button*/
+.radio-btn .medium-section p{
+    font-size: 30px; /* Made boba tea icon slightly larger by 5px*/
+    padding-top: 25%; /* To keep the ratio the same (of how all 3 buttons look), I adjusted the top padding by reducing it by 5% */
+    padding-bottom: 15%; /* Adjusted the bottom padding by reducing it by 5% */
+    margin: auto; /* Makes sure the boba tea icons are within the radio button */
+}
+
+/* Styling the text & icon section in 'Medium' radio button - the same as 'Small' and 'Medium' radio button for consistency */
+.radio-btn .large-section{
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+/* Styling the boba tea icon in the 'Large' radio button*/
+.radio-btn .large-section p{
+    font-size: 35px; /* Since it's the largest boba tea icon, I made it larger by 5px*/
+    padding-top: 20%; /* Adjusted the top padding by reducing it by 5% */
+    padding-bottom: 10%; /* Adjusted the top padding by reducing it by 5% */
+    margin: auto;
+}
+
+
+
+/* Styling the Rating section */
+/* Dropdown input rating box */
+.form-row select{
+    font-size: 16px; /* Keeping font consistent with the other input boxes */
+    padding: 10px; /* Keep padding between the dropdown option & edge of the dropdown input rating box consistent as the other input sections */
+    width: 100%; /* Rating box matches the width of the other input sections in the BobaTrack Form */
+    border-radius: 10px; /* Consistent rounded edges of the dropdown input rating box */
+    border-color: #443d43; /* Keeping border colour consistent */
+    border-width: 0.1rem; /* Keeping border width consistent */
+}
+
+
+/* Styling the Comments section */
+.form-row textarea{
+    font-size: 16px; /* Keeping font consistent with the other input boxes */
+    padding: 10px; /* Consistent padding as the other input sections */
+    width: 95%; /* Comment box matches the width of the other input sections in the BobaTrack Form */
+    height: 100px; /* Fixed height, creates more space to write comments, and not just one line of text */
+    border-radius: 10px; /* Consistent rounded edges of the comments box */
+    border-color: #443d43; /* Keeping border colour consistent */
+    border-width: 0.1rem; /* Keeping border width consistent */
+    font-family: Arial, Helvetica, sans-serif; /* Putting font family here as well, otherwise, the font of the text in the comments box will be serif / look computerised */
+}
+
+/* Styling the Submit and Reset Buttons */
+.submit-reset input{
+    font-size: 16px; 
+    padding: 10px;
     border-radius: 10px;
     border-color: #443d43;
     border-width: 0.1rem;
 }
 
-.submit-reset input{
-    font-size: 16px;
-    padding: 10px 10px;
-    border-radius: 10px;
-    border-color: #443d43;
-    border-width: 0.1rem;
+
+/* Enables mobile View: When the screen is at mobile view 600px, the two sections (Bobatracker form & Tracked Boba Orders) will be vertically placed on top of each other */
+@media only screen and (max-width: 600px) {
+    .float-container{
+        display: block;
+    }
 }

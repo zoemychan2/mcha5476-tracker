@@ -1,68 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bobatracker</title>
-    <link href="style.css" rel="stylesheet"/>
+    <link href="style.css" rel="stylesheet" />
 </head>
+
 <body>
+    <!--Title heading of Web Application-->
     <h1>BOBATRACK🧋</h1>
 
-    <div class ="float-container">
-            <div class="bobatrack-form">
-    <h2>BobaTrack Form</h2>
-    <form>
-        <div class="form-row">
-            <label for="bobaOrder">Boba Order</label> <br>
-            <input type="text" name="bobaOrder" id="bobaOrder" required="true" placeholder="Enter Your Boba Order" />
-          </div>
+    <!--Container that includes both BobaTrack Form and Tracked Boba Orders section-->
+    <div class="float-container">
 
-        <div class="form-row">
-            <label for="bobaShop">Boba Shop</label><br>
-            <input type="text" name="bobaShop" id="bobaShop" required="true" placeholder="Enter Boba Shop Name"/>
-          </div>
+        <!--BobaTrack form section (on the left)-->
+        <div class="bobatrack-form">
 
-        <div class="form-row">
-            <label for="bobaSize">Size</label><br>
-            <input type="number" name="bobaSize" id="bobaSize" required="true" />
-          </div>
+            <!--Heading-->
+            <h2>BobaTrack Form</h2>
 
-        <div class="form-row">
-            <label for="bobaPrice">Price</label><br>
-            <input type="number" name="bobaPrice" id="bobaPrice" required="true" placeholder="Eg. $6.8"/>
-          </div>
+            <!--Creating the form-->
+            <form>
 
-        <div class="form-row">
-            <label for="bobaRating">Rating</label><br>
-            <select name="boba-rating" id="boba-rating" required="true">
-                <option value="select-star">Select... </option>
-                <option value="one-star">1 Star ⭐️ </option>
-                <option value="two-star">2 Star ⭐️⭐️ </option>
-                <option value="three-star">3 Star ⭐️⭐️⭐️ </option>
-                <option value="four-star">4 Star ⭐️⭐️⭐️⭐️ </option>
-                <option value="five-star">5 Star ⭐️⭐️⭐️⭐️⭐️ </option>
-            </select>
-          </div>
+                <!--Boba Order Input Tab-->
+                <div class="form-row">
+                    <!--Subheading-->
+                    <label for="bobaOrder">Boba Order</label> <br>
+                    <!--Text input where users put their boba order. Users need to fill this input otherwise a pop up will appear 'Please fill in this field' when they try to submit the form. The input box contains placeholder text where it prompts users to type there.-->
+                    <input type="text" name="bobaOrder" id="bobaOrder" required="true"
+                        placeholder="Enter Your Boba Order" />
+                </div>
 
-        <div class="form-row">
-            <label for="bobaComments">Comments</label><br>
-            <textarea name="bobaComments" id="bobaComments" required="true" placeholder="Type your comments here..."></textarea>
-          </div>
+                <!--Boba Shop Name Input Tab - code within this div is the same format as the previous Boba Order Input Tab to keep the text input format consistent -->
+                <div class="form-row">
+                    <label for="bobaShop">Boba Shop</label><br>
+                    <input type="text" name="bobaShop" id="bobaShop" required="true"
+                        placeholder="Enter Boba Shop Name" />
+                </div>
 
-        <div class="submit-reset">
-            <input type="submit" value="Add to Tracked Boba Orders" />
-            <input type="reset" value="Reset" />
-          </div>
-    </form>
-    </div>
+                <!--Boba Size Input Tab-->
+                <div class="form-rowsize">
+                    <!--Subheading-->
+                    <label for="bobaSize">Size</label><br>
 
+                    <!-- radio-buttons class includes all the radio selectors (small, medium, large)-->
+                    <div class="radio-buttons">
+
+                        <!-- First radio selector (Small)-->
+                        <label class="custom-radio">
+                            <input type="radio" name="radio">
+                            <span class="radio-btn">
+                                <div class="small-section">
+                                    <p>🧋</p>Small <br>350ML
+                                </div>
+                            </span>
+                        </label>
+
+                        <!-- Second radio selector (Medium)-->
+                        <label class="custom-radio">
+                            <input type="radio" name="radio">
+                            <span class="radio-btn">
+                                <div class="medium-section">
+                                    <p>🧋</p>Medium <br>500ML
+                                </div>
+                            </span>
+                        </label>
+
+                        <!-- Third radio selector (Large)-->
+                        <label class="custom-radio">
+                            <input type="radio" name="radio">
+                            <span class="radio-btn">
+                                <div class="large-section">
+                                    <p>🧋</p>Large <br>700ML
+                                </div>
+                            </span>
+                        </label>
+                    </div>
+
+                </div>
+
+                <!-- Boba Price Input tab -->
+                <div class="form-row">
+                    <label for="bobaPrice">Price</label><br>
+                    <!-- Unlike the other inputs, this input type only allows numbers -->
+                    <input type="number" name="bobaPrice" id="bobaPrice" required="true" placeholder="Eg. $6.8" />
+                </div>
+
+                <!-- Boba Rating Input tab -->
+                <div class="form-row">
+                    <label for="bobaRating">Rating</label><br>
+                    <!-- Select input is used to create dropdown. 7 option values, including 1 which prompts users to press on the dropdown (Select...) -->
+                    <select name="boba-rating" id="boba-rating" required="true">
+                        <option value="select-star">Select... </option>
+                        <option value="one-star">1 Star ⭐️ </option>
+                        <option value="two-star">2 Star ⭐️⭐️ </option>
+                        <option value="three-star">3 Star ⭐️⭐️⭐️ </option>
+                        <option value="four-star">4 Star ⭐️⭐️⭐️⭐️ </option>
+                        <option value="five-star">5 Star ⭐️⭐️⭐️⭐️⭐️ </option>
+                    </select>
+                </div>
+
+                 <!-- Comments Input tab -->
+                <div class="form-row">
+                    <label for="bobaComments">Comments</label><br>
+                     <!-- To create a bigger comments section (not just one line), textarea is used -->
+                    <textarea name="bobaComments" id="bobaComments" required="true"
+                        placeholder="Type your comments here..."></textarea>
+                </div>
+
+                 <!-- Submit and Reset button -->
+                <div class="submit-reset">
+                    <input type="submit" value="Add to Tracked Boba Orders" />
+                    <input type="reset" value="Reset" />
+                </div>
+            </form>
+        </div>
+
+        <!-- Tracked boba orders section (on the right) -->
         <div class="trackedboba-orders">
-        <h2>Tracked Boba Orders</h2>
+            <h2>Tracked Boba Orders</h2>
+        </div>
     </div>
-</div>
 
     <script src="script.js"></script>
 </body>
+
 </html>

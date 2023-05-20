@@ -23,7 +23,7 @@
             <h2>BobaTrack Form</h2>
 
             <!--Creating the form-->
-            <form>
+            <form id="bobatrackform">
 
                 <!--Boba Order Input Tab-->
                 <div class="form-row">
@@ -51,7 +51,7 @@
 
                         <!-- First radio selector (Small)-->
                         <label class="custom-radio">
-                            <input type="radio" name="radio">
+                            <input type="radio" name="radio" id="small" value="Small" onclick="checkButton()">
                             <span class="radio-btn">
                                 <div class="small-section">
                                     <p>🧋</p>Small <br>350ML
@@ -61,7 +61,7 @@
 
                         <!-- Second radio selector (Medium)-->
                         <label class="custom-radio">
-                            <input type="radio" name="radio">
+                            <input type="radio" name="radio" id="medium" value="Medium" onclick="checkButton()">
                             <span class="radio-btn">
                                 <div class="medium-section">
                                     <p>🧋</p>Medium <br>500ML
@@ -71,7 +71,7 @@
 
                         <!-- Third radio selector (Large)-->
                         <label class="custom-radio">
-                            <input type="radio" name="radio">
+                            <input type="radio" name="radio" id="large" value="Large" onclick="checkButton()">
                             <span class="radio-btn">
                                 <div class="large-section">
                                     <p>🧋</p>Large <br>700ML
@@ -93,13 +93,13 @@
                 <div class="form-row">
                     <label for="bobaRating">Rating</label><br>
                     <!-- Select input is used to create dropdown. 7 option values, including 1 which prompts users to press on the dropdown (Select...) -->
-                    <select name="boba-rating" id="boba-rating" required="true">
+                    <select name="bobaRating" id="bobaRating" required="true">
                         <option value="select-star">Select... </option>
                         <option value="one-star">1 Star ⭐️ </option>
-                        <option value="two-star">2 Star ⭐️⭐️ </option>
-                        <option value="three-star">3 Star ⭐️⭐️⭐️ </option>
-                        <option value="four-star">4 Star ⭐️⭐️⭐️⭐️ </option>
-                        <option value="five-star">5 Star ⭐️⭐️⭐️⭐️⭐️ </option>
+                        <option value="two-star">2 Stars ⭐️⭐️ </option>
+                        <option value="three-star">3 Stars ⭐️⭐️⭐️ </option>
+                        <option value="four-star">4 Stars ⭐️⭐️⭐️⭐️ </option>
+                        <option value="five-star">5 Stars ⭐️⭐️⭐️⭐️⭐️ </option>
                     </select>
                 </div>
 
@@ -113,15 +113,16 @@
 
                  <!-- Submit and Reset button -->
                 <div class="submit-reset">
-                    <input type="submit" value="Add to Tracked Boba Orders" />
+                    <input type="submit" value="Add to Tracked Boba Orders" onclick =" checkButton()" />
                     <input type="reset" value="Reset" />
                 </div>
             </form>
         </div>
 
         <!-- Tracked boba orders section (on the right) -->
-        <div class="trackedboba-orders">
+        <div class="trackedboba-orders" id="trackedbobaorders">
             <h2>Tracked Boba Orders</h2>
+            <p id="disp"> </p>
         </div>
     </div>
 

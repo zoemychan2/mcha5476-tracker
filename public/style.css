@@ -87,6 +87,8 @@ h2 {
 /* radio-buttons consist of all 3 radio selectors*/
 .radio-buttons{
     margin: 0 auto; /* Radio selectors placed horizontally across screen, within in the BobaTrack section */
+    display:flex;
+    justify-content: space-between;
 }
 
 /* Hides the original default radio selectors, since I created my own version*/
@@ -171,10 +173,11 @@ h2 {
 .form-row select{
     font-size: 16px; /* Keeping font consistent with the other input boxes */
     padding: 10px; /* Keep padding between the dropdown option & edge of the dropdown input rating box consistent as the other input sections */
-    width: 100%; /* Rating box matches the width of the other input sections in the BobaTrack Form */
+    width: 98%; /* Rating box matches the width of the other input sections in the BobaTrack Form */
     border-radius: 10px; /* Consistent rounded edges of the dropdown input rating box */
     border-color: #443d43; /* Keeping border colour consistent */
     border-width: 0.1rem; /* Keeping border width consistent */
+    cursor: pointer;
 }
 
 
@@ -197,6 +200,7 @@ h2 {
     border-radius: 10px;
     border-color: #443d43;
     border-width: 0.1rem;
+    cursor: pointer;
 }
 
 
@@ -205,4 +209,9 @@ h2 {
     .float-container{
         display: block;
     }
+}
+
+/* Remove the bullet point*/
+li{
+    list-style-type:none;
 }

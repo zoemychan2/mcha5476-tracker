@@ -99,7 +99,7 @@ h2 {
 /* Styling of my custom radio buttons */
 .radio-btn{
     /* Each radio button has width and height of 140px */
-    width: 140px; 
+    width: 220px; 
     height: 140px;
     display: inline-block; /* Makes sure to display the radio buttons horizontally */
     border-radius: 10px; /* Making the radio button to have rounded edges */
@@ -111,7 +111,7 @@ h2 {
     margin-top: 0.5rem; /* Adding margin between the radio buttons and the Size label */
 }
 
-/* Changing colour of radio button whenever it is checked/cliked on */
+/* Changing colour of radio button whenever it is checked/clicked on */
 .custom-radio input:checked + .radio-btn{
     background-color: #b9b4b2;
 }
@@ -193,25 +193,125 @@ h2 {
     font-family: Arial, Helvetica, sans-serif; /* Putting font family here as well, otherwise, the font of the text in the comments box will be serif / look computerised */
 }
 
-/* Styling the Submit and Reset Buttons */
-.submit-reset input{
+
+
+/* Styling the Add to Tracked Boba Orders & Reset buttons (on the BobaTrack Form section)*/
+.submit-reset button{
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* Styling specifically the Add to Tracked Boba Orders button */
+.add-button {
+    background-color: #443d43;
+    color: #f4f3ed;
+    padding: 20px 120px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px; /* Add margin at the top */
+  }
+
+/* Styling specifically the Reset button */
+.reset-button{
+    background-color: #ded7d4;
+    color: black;
+    padding: 20px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px; /* Add margin at the top */
+    margin-left: 5%; /*Add margin on the left to ensure it doesn't touch the Add to Tracked Boba Orders button*/
+    border-color: #443d43;
+    border-width: 0.1rem;
+
+}
+
+
+
+/* Styling the Tracked Boba Orders Section */
+/* Styling the li element */
+    li {
+        display: inline-block; /* Allows to set width and height on the li element */
+        background-color: #b9b4b2;
+        border-radius: 10px;
+        width: 90%;;
+        padding: 20px;
+        margin: 10px; /* Add some margin between the boxes */
+        margin-top: 0px;
+        list-style-type:none; /* Remove the bullet point default format*/
+    }
+
+/* Styling the p element inside li element */
+p{
+    margin: 0px; 
+}
+
+/* Styling the delete button */
+button{
     font-size: 16px; 
     padding: 10px;
     border-radius: 10px;
     border-color: #443d43;
     border-width: 0.1rem;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content horizontally */
+    justify-content: center; /* Center the content vertically */
 }
 
+/* Styling the container which consists of date and delete button */
+.datedelete-container{
+    display: flex;
+    justify-content: space-between;
+    background-color:#ded7d4;
+    border-radius: 10px;
+    width: 90%;;
+    padding: 20px;
+    margin: 10px; /* Add some margin between the boxes */
+    cursor: pointer;
+
+}
+
+/* Styling specifically the date element */
+.date-element{
+    display: flex;
+    align-items: center;
+}
 
 /* Enables mobile View: When the screen is at mobile view 600px, the two sections (Bobatracker form & Tracked Boba Orders) will be vertically placed on top of each other */
 @media only screen and (max-width: 600px) {
     .float-container{
         display: block;
     }
-}
+    .radio-buttons{
+        display: block;
+        
+    }
+    .add-button{
+        display: block; 
+        width: auto; 
+    }
+    .reset-button{
+        display: block; 
+        width: auto;
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
 
-/* Remove the bullet point*/
-li{
-    list-style-type:none;
+    li{
+        display: block;  
+        width: auto;
+    }
+
+    .datedelete-container{
+        display: block; 
+        width: auto;
+    }
+    
+
+
 }

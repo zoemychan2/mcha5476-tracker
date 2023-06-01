@@ -25,7 +25,7 @@
             <!--Heading-->
             <h2>BobaTrack Form</h2>
 
-            <!--Creating the form: My code format was inspired by the DECO2017 Task tracker scrimba and W3 Schools code https://www.w3schools.com/html/html_form_input_types.asp (W3Schools, 2023)-->
+            <!--Creating the form: My code format was inspired by the DECO2017 Task tracker scrimba (Dongas, 2023) and W3 Schools code https://www.w3schools.com/html/html_form_input_types.asp (W3Schools, 2023)-->
             <form id="bobatrackform">
 
                 <!--Boba Order Input Tab-->
@@ -95,7 +95,7 @@
                 <!-- Boba Rating Input tab -->
                 <div class="form-row">
                     <label for="bobaRating">Rating</label><br>
-                    <!-- Select input is used to create dropdown. 7 option values, including 1 which prompts users to press on the dropdown (Select...) -->
+                    <!-- Select input is used to create dropdown. 6 option values, including 1 which prompts users to press on the dropdown (Select...) -->
                     <select name="bobaRating" id="bobaRating" required="true">
                         <option value="select-star">Select... </option>
                         <option value="one-star">1 Star ⭐️ </option>
@@ -114,9 +114,9 @@
                         placeholder="Type your comments here..."></textarea>
                 </div>
 
-                <!-- Submit and Reset button -->
+                <!-- Submit and Reset button - used 'button' element to create functional buttons -->
                 <div class="submit-reset">
-                    <button class="add-button">Add To Tracked Boba Orders </button>
+                    <button class="add-button">Add To Tracked Boba Orders </button> 
                     <button id="reset-button" class="reset-button">Reset </button>
                 </div>
             </form>

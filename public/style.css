@@ -14,15 +14,15 @@ body {
 
 /* BobaTrack title */
 h1 {
-
     display: flex; /* Flexbox properties inspired by Coyier (2013) https://css-tricks.com/snippets/css/a-guide-to-flexbox/*/
     align-items: center;
     background-color: #dec0af; /* Colour of the rounded background shape */
     border-width: 0.3rem;
     border-color: #898088;  
-    border-style: solid; /*text-align: left;/* BOBATRACK will be placed on the left */
+    border-style: solid; 
+    text-align: left;/* BOBATRACK will be placed on the left */
     padding: 20px; /* 20px spacing between the BobaTrack title and the background shape */
-    margin-top: 0; /* No  top margin above BobaTrack title*/
+    margin-top: 0; /* No top margin above BobaTrack title*/
     border-radius: 10px; /* Rounded rectangle shape */
     font-family: 'Futura', sans-serif; /* Used Futura font for my web app */
     color: #443d43;
@@ -52,7 +52,7 @@ h2 {
 
 /* Styles added to the float container  - container consists of both bobatrack form and tracked boba orders */
 .float-container {
-    /* To create the 2 equal sections, with a gap in the middle, I created the layout on the website, which generated the grid CSS through https://grid.layoutit.com/ */
+    /* To create the 2 equal sections, with a gap in the middle, I created the layout on the website, which generated the grid CSS through https://grid.layoutit.com/ (Leniolabs_LLC, 2023)*/
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
@@ -80,7 +80,7 @@ h2 {
     padding: 20px;
 }
 
-/* Each of the subheadings under BobaTrack Form have font size 18px (Boba Order, Boba Shop, Size, Price, Ratings, Comments */
+/* Each of the subheadings under BobaTrack Form have font size 18px (Boba Order, Boba Shop, Size, Price, Ratings, Comments), and font family */
 .bobatrack-form label {
     font-size: 18px;
     font-family: 'Futura', sans-serif;
@@ -89,21 +89,15 @@ h2 {
 
 /* Styling of the text and number input boxes (Boba Order, Boba Shop, Price) */
 .form-row input {
-    border-radius: 10px;
-    /* Making rounded edges on the input boxes */
-    border-color: #898088;
-    /* Border colour of the inbox box */
-    border-width: 0.2rem;
-    /* Standardising the border width to 0.1rem */
+    border-radius: 10px; /* Making rounded edges on the input boxes */
+    border-color: #898088; /* Border colour of the inbox box */
+    border-width: 0.2rem; /* Standardising the border width to 0.1rem */
     border-style: solid;
     font-size: 16px;
     font-family: 'Futura', sans-serif;
-    padding: 10px;
-    /* The input boxes have padding of 10px all around  */
-    width: 95%;
-    /* Input boxes fill up 95% of the BobaTrack section, as it would look too cramped filling it up all the way to the edge */
-    margin-top: 0.5rem;
-    /* Create 0.5rem distance between input labels and input boxes */
+    padding: 10px; /* The input boxes have padding of 10px all around  */
+    width: 95%; /* Input boxes fill up 95% of the BobaTrack section, as it would look too cramped filling it up all the way to the edge */
+    margin-top: 0.5rem; /* Create 0.5rem distance between input labels and input boxes */
 }
 
 /* Create 0.5rem distance between Rating label and dropdown box (Rating section) */
@@ -121,8 +115,7 @@ h2 {
 
 /* radio-buttons consist of all 3 radio selectors*/
 .radio-buttons {
-    margin: 0 auto;
-    /* Radio selectors placed horizontally across screen, within in the BobaTrack section */
+    margin: 0 auto; /* Radio selectors placed horizontally across screen, within in the BobaTrack section */
     display: flex;
     justify-content: space-between;
 }
@@ -134,25 +127,16 @@ h2 {
 
 /* Styling of my custom radio buttons */
 .radio-btn {
-    /* Each radio button has width and height of 140px */
-    width: 215px;
-    height: 140px;
-    display: inline-block;
-    /* Makes sure to display the radio buttons horizontally */
-    border-radius: 10px;
-    /* Making the radio button to have rounded edges */
-    position: relative;
-    /* Position of the radio buttons are relative to the parent element  */
-    text-align: center;
-    /* Text is centered within the button */
-    background-color: #ded7d4;
-    /* Colour of the radio buttons before being pressed */
-    cursor: pointer;
-    /* Makes sure the pointer appears when hovering over the radio buttons*/
-    border: 0.2rem solid #898088;
-    /* Styling the border of the radio buttons */
-    margin-top: 0.5rem;
-    /* Adding margin between the radio buttons and the Size label */
+    width: 215px;/* Each radio button has width of 215px */
+    height: 140px; /* Each radio button has height of 140px */
+    display: inline-block; /* Makes sure to display the radio buttons horizontally */
+    border-radius: 10px; /* Making the radio button to have rounded edges */
+    position: relative; /* Position of the radio buttons are relative to the parent element  */
+    text-align: center; /* Text is centered within the button */
+    background-color: #ded7d4; /* Colour of the radio buttons before being pressed */
+    cursor: pointer; /* Makes sure the pointer appears when hovering over the radio buttons*/
+    border: 0.2rem solid #898088; /* Styling the border of the radio buttons */
+    margin-top: 0.5rem; /* Adding margin between the radio buttons and the Size label */
 }
 
 /* Changing colour of radio button whenever it is checked/clicked on */
@@ -172,12 +156,9 @@ h2 {
 /* Styling the boba tea icon in the 'Small' radio button*/
 .radio-btn .small-section p {
     font-size: 25px;
-    padding-top: 30%;
-    /* Distance between boba tea icon and the top of the radio button */
-    padding-bottom: 20%;
-    /* Distance between boba tea icon and the text */
-    margin: auto;
-    /* Makes sure the boba tea icons are within the radio button */
+    padding-top: 30%; /* Distance between boba tea icon and the top of the radio button */
+    padding-bottom: 20%; /* Distance between boba tea icon and the text */
+    margin: auto; /* Makes sure the boba tea icons are within the radio button */
 }
 
 /* Styling the text & icon section in 'Medium' radio button - the same as 'Small' radio button for consistency */
@@ -197,7 +178,7 @@ h2 {
     margin: auto;  /* Makes sure the boba tea icons are within the radio button */
 }
 
-/* Styling the text & icon section in 'Medium' radio button - the same as 'Small' and 'Medium' radio button for consistency */
+/* Styling the text & icon section in 'Large' radio button - the same as 'Small' and 'Medium' radio button for consistency */
 .radio-btn .large-section {
     width: 80px;
     height: 80px;
@@ -311,14 +292,14 @@ li {
     height: 110px;
 }
 
-/* Styling datedelete container */
+/* Styling list container (where the detailed tracked boba orders are) */
 .list {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-/* Styling p element within datedelete container */
+/* Styling p element within list container (where the detailed tracked boba orders are) */
 .list p {
     display: inline-block;
     vertical-align: top;
@@ -328,7 +309,7 @@ li {
     color: #443d43;
 }
 
-/* Styling position of img element within datedelete container */
+/* Styling position of img element within list container (where the detailed tracked boba orders are) */
 .list img {
     display: inline-block;
     vertical-align: center;
@@ -336,14 +317,14 @@ li {
 
 }
 
-/* Styling the margin, font, colour inside li element */
+/* Styling the margin, font, colour of p element in datedelete container (container where the date and delete button are) */
 p {
     margin: 0px;
     font-family: 'Futura', sans-serif;
     color: #443d43;
 }
 
-/* Styling the delete button */
+/* Styling the delete button on the datedelete container*/
 button {
     font-size: 16px;
     padding: 10px;
@@ -368,7 +349,6 @@ button {
     border-style: solid;
     border-radius: 10px;
     width: 90%;
-    ;
     padding: 20px;
     margin: 10px;  /* Add some margin between the boxes */
     cursor: pointer;  /* Makes sure the pointer appears when hovering over the radio buttons*/

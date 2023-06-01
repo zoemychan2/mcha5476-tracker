@@ -1,3 +1,5 @@
+// Based on the DECO2017 week 6 lecture, I followed the steps to set up the backend server (server.js and package.json) which was relatively straightfoward (check readme file). 
+
 //Import Express package
 const express = require('express');
 

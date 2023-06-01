@@ -11,7 +11,10 @@
 
 <body>
     <!--Title heading of Web Application-->
-    <h1>BOBATRACK🧋</h1>
+    <h1>
+        BOBATRACK
+        <img src="../Bobatrack images/corgi.png" alt="Corgi" /> <!--Adding picture of corgi holding boba tea icon in the title section, method inspired by Draco (2003) https://stackoverflow.com/questions/649576/css-setting-background-image-in-css-->
+    </h1>
 
     <!--Container that includes both BobaTrack Form and Tracked Boba Orders section-->
     <div class="float-container">
@@ -22,14 +25,14 @@
             <!--Heading-->
             <h2>BobaTrack Form</h2>
 
-            <!--Creating the form-->
+            <!--Creating the form: My code format was inspired by the DECO2017 Task tracker scrimba and W3 Schools code https://www.w3schools.com/html/html_form_input_types.asp (W3Schools, 2023)-->
             <form id="bobatrackform">
 
                 <!--Boba Order Input Tab-->
                 <div class="form-row">
                     <!--Subheading-->
                     <label for="bobaOrder">Boba Order</label> <br>
-                    <!--Text input where users put their boba order. Users need to fill this input otherwise a pop up will appear 'Please fill in this field' when they try to submit the form. The input box contains placeholder text where it prompts users to type there.-->
+                    <!--Text input where users put their boba order. Users need to fill this input otherwise a pop up will appear 'Please fill in this field' when they try to submit the form. The input box contains placeholder text where it prompts users to type there, uses input prompt ui design pattern (Learning Loop, 2023).-->
                     <input type="text" name="bobaOrder" id="bobaOrder" required="true"
                         placeholder="Enter Your Boba Order" />
                 </div>
@@ -46,20 +49,21 @@
                     <!--Subheading-->
                     <label for="bobaSize">Size</label><br>
 
-                    <!-- radio-buttons class includes all the radio selectors (small, medium, large)-->
+                    <!-- radio-buttons class includes all the radio selectors (small, medium, large)
+                    Custom radio buttons inspired by DesignTorch (2020) https://www.youtube.com/watch?v=GZh52Fh8o1o&ab_channel=DesignTorch and Crozier (2013) https://stackoverflow.com/questions/19014766/how-can-i-get-input-radio-elements-to-horizontally-align -->
                     <div class="radio-buttons">
 
                         <!-- First radio selector (Small)-->
                         <label class="custom-radio">
-                            <input type="radio" name="radio" id="small" value="Small" onclick="checkButton()">
-                            <span class="radio-btn">
-                                <div class="small-section">
-                                    <p>🧋</p>Small <br>350ML
+                            <input type="radio" name="radio" id="small" value="Small" onclick="checkButton()">  <!-- When users click on the radio button, the checkButton function is run (stated in Javascript)-->
+                            <span class="radio-btn"> <!-- Adding a span class to style the radio buttons (the rounded rectangle box) -->
+                                <div class="small-section"> 
+                                    <p>🧋</p>Small <br>350ML <!-- Text inside the button -->
                                 </div>
                             </span>
                         </label>
 
-                        <!-- Second radio selector (Medium)-->
+                        <!-- Second radio selector (Medium), same styling and reasoning as the first radio selector -->
                         <label class="custom-radio">
                             <input type="radio" name="radio" id="medium" value="Medium" onclick="checkButton()">
                             <span class="radio-btn">
@@ -69,7 +73,7 @@
                             </span>
                         </label>
 
-                        <!-- Third radio selector (Large)-->
+                        <!-- Third radio selector (Large), same styling and reasoning as the previous radio selectors -->
                         <label class="custom-radio">
                             <input type="radio" name="radio" id="large" value="Large" onclick="checkButton()">
                             <span class="radio-btn">
@@ -79,7 +83,6 @@
                             </span>
                         </label>
                     </div>
-
                 </div>
 
                 <!-- Boba Price Input tab -->
@@ -103,17 +106,17 @@
                     </select>
                 </div>
 
-                 <!-- Comments Input tab -->
+                <!-- Comments Input tab -->
                 <div class="form-row">
                     <label for="bobaComments">Comments</label><br>
-                     <!-- To create a bigger comments section (not just one line), textarea is used -->
+                    <!-- To create a bigger comments section (not just one line), textarea is used -->
                     <textarea name="bobaComments" id="bobaComments" required="true"
                         placeholder="Type your comments here..."></textarea>
                 </div>
 
-                 <!-- Submit and Reset button -->
+                <!-- Submit and Reset button -->
                 <div class="submit-reset">
-                    <button class="add-button">Add To Tracked Boba Orders + </button>
+                    <button class="add-button">Add To Tracked Boba Orders </button>
                     <button id="reset-button" class="reset-button">Reset </button>
                 </div>
             </form>
@@ -121,8 +124,8 @@
 
         <!-- Tracked boba orders section (on the right) -->
         <div class="trackedboba-orders" id="trackedbobaorders">
-            <h2>Tracked Boba Orders</h2>
-            <p id="disp"> </p>
+            <h2>Tracked Boba Orders</h2>  <!-- Title of that section -->
+            <p id="paragraph"></p>  <!-- Paragraph element (includes the date, and the tracked boba order) -->
         </div>
     </div>
 

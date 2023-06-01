@@ -11,7 +11,7 @@ Following the web design assignment on my boba tracking application, I received 
 Overall, users said that my boba tracking application was unique, as they haven't seen anything like this before, which made it a novel design. It was simple and straightforward to use for different screen sizes.
 
 High fidelity drawing on Figma & previous data model
-![image 1]('../Readme images/image 1.png')
+![image 1]('/Readme images/image 1.png')
 
 Pictures of user interviews of my web designs
 
